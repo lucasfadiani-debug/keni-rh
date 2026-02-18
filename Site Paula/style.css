@@ -1,0 +1,56 @@
+/* =========================
+   RESET E CONFIGURAÇÕES GLOBAIS
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: radial-gradient(circle at top, #0f172a, #020617);
+    color: white;
+    overflow-x: hidden;
+}
+
+.background-glow {
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    background: #6366f1;
+    filter: blur(180px);
+    opacity: 0.15;
+    top: -200px;
+    right: -200px;
+    z-index: -1;
+    animation: floatGlow 10s infinite alternate;
+}
+
+@keyframes floatGlow {
+    from { transform: translateY(0px); }
+    to { transform: translateY(60px); }
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(2, 6, 23, 0.6);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 22px;
+    background: linear-gradient(135deg, #38bdf8, #818cf8);
+    -webkit-background-clip:
